@@ -11,12 +11,6 @@ import pixel.academy.crud_app.entity.Student;
 @SpringBootApplication
 public class CrudAppApplication {
 
-	private final DataSourceTransactionManager dataSourceTransactionManager;
-
-	public CrudAppApplication(DataSourceTransactionManager dataSourceTransactionManager) {
-		this.dataSourceTransactionManager = dataSourceTransactionManager;
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(CrudAppApplication.class, args);
 	}
@@ -42,6 +36,10 @@ public class CrudAppApplication {
 
 		// afisam ID-ul studentului salvat
 		System.out.println("Saved student. Generated id: " + newStudent.getId());
+	}
+
+	private void createMultipleStudents(StudentDAO studentsDAO) {
+
 	}
 
 }
